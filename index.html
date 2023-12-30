@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* добавляем стили для контейнера с падающим снегом */
+        #snow-container {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            pointer-events: none; /* чтобы события мыши не применялись к снегу */
+        }
+
+        .tree {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            pointer-events: none; /* чтобы события мыши не применялись к изображению елки */
+        }
+    </style>
+    <script>
+        // Добавляем JavaScript код для падающего снега
+        function createSnowFlake() {
+            const snowFlake = document.createElement("img");
+            snowFlake.src = "snowflake.png"; // замените "snowflake.png" на ваш файл изображения снежинки
+            snowFlake.className = "snowflake";
+            snowFlake.style.position = "absolute";
+            snowFlake.style.width = "25px"; // задайте размер снежинки
+            snowFlake.style.opacity = "0.7"; // добавьте прозрачность
+            snowFlake.style.animation = "fall 5s linear infinite"; // добавьте анимацию падения снегинок
+
+            // задаем случайные позиции для снежинок
+            snowFlake.style.left = `${Math.random() * window.innerWidth}px`;
+            snowFlake.style.top = `-${Math.random() * window.innerHeight}px`;
+            document.body.appendChild(snowFlake);
+
+            // удаляем снежинку после падения из области видимости
+            snowFlake.addEventListener("animationiteration", () => {
+                snowFlake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowFlake.style.top = `-${Math.random() * window.innerHeight}px`;
+            });
+        }
+
+        // создаем несколько снежинок
+        for (let i = 0; i < 30; i++) {
+            createSnowFlake();
+        }
+    </script>
+</head>
+<body>
+    <!-- добавляем контейнер для падающего снега -->
+    <div id="snow-container"></div>
+
+    <!-- добавляем изображение елки с гирляндами -->
+    <img src="elka.png" width="150" height="200" class="tree"> <!-- замените "your-christmas-tree-image.png" на ваше изображение елки -->
+</body>
+</html>
