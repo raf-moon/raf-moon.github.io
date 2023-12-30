@@ -1,10 +1,16 @@
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Image Upload</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-<img src="9b7fb87008784ed2394ea9fd0e0ed062.png" width="100%">
-<img src="13-ca-py-ba-ra.8upw306mfbzk..jpeg" width="100%">
-<img src="96vakce82nnh6rrz80803wx93lzsjaee.jpg" width="100%">
-<img src="845aac8b866d6453e62c331c657d1ce320230529-4092812-wuchlm.jpg" width="100%">
-<img src="870x489_0x259_detail_crop_20230720121303_bb7da4e9_e4eb3f5ef3303ee23c6c7827fec55723597f0c7a88cfd13cf9bd380568ccfda7.jpg" width="100%">
-<img src="in-ca-py-ba-ra.dlcnmhdda7i5..jpg" width="100%">
+  <h1>Image Upload</h1>
+  <input type="file" id="imageUpload" accept="image/*">
+  <textarea id="imageText" placeholder="Enter text"></textarea>
+  <button onclick="uploadImage()">Upload</button>
+  <div id="uploadedImages"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
