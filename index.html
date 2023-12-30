@@ -17,6 +17,15 @@
             pointer-events: none; /* чтобы события мыши не применялись к изображению елки */
         }
     </style>
+    
+</head>
+<body>
+    <!-- добавляем контейнер для падающего снега -->
+    <div id="snow-container"></div>
+
+    <!-- добавляем изображение елки с гирляндами -->
+    <img src="elka.png" width="150" height="200" class="tree"> <!-- замените "your-christmas-tree-image.png" на ваше изображение елки -->
+</body>
     <script>
         // Добавляем JavaScript код для падающего снега
         function createSnowFlake() {
@@ -45,12 +54,4 @@
             createSnowFlake();
         }
     </script>
-</head>
-<body>
-    <!-- добавляем контейнер для падающего снега -->
-    <div id="snow-container"></div>
-
-    <!-- добавляем изображение елки с гирляндами -->
-    <img src="elka.png" width="150" height="200" class="tree"> <!-- замените "your-christmas-tree-image.png" на ваше изображение елки -->
-</body>
 </html>
