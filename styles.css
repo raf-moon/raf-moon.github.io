@@ -1,0 +1,33 @@
+css
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+input[type="file"], textarea {
+  display: block;
+  margin: 10px auto;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+}
+
+#uploadedImages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageContainer {
+  margin: 10px;
+  text-align: center;
+}
+
+.imageContainer img {
+  max-width: 300px;
+}
